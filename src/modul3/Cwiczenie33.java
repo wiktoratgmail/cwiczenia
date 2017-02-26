@@ -2,11 +2,27 @@ package modul3;
 
 import java.util.Scanner;
 
+/**
+ * @author admin
+ *
+ */
 public class Cwiczenie33 {
 // Uniwersalny kalendarz
-	 
+  
+		public static int wczytajInt()
+		{
+			Scanner klawiatura = new Scanner(System.in);
+			
+			String numer = klawiatura.next(); 
+			
+			int numberInt = Integer.parseInt(numer);
+			
+			klawiatura.close();
+			
+			return numberInt;
+			 
+		} 
 	
-	 
 		
 		public static String podajNazweMiesiaca(int numer)
 		{
@@ -21,39 +37,31 @@ public class Cwiczenie33 {
 			 return miesiac; 
 		} 
 		
+		public static int wczytajNumerMiesiaca()
+		{
+			 
+			System.out.println("Podaj numer miesiaca");
+			 
+			 int numer  = wczytajInt();
+			 
+			 return numer; 
+		} 
+		 
 		
 		public static void main(String[] args) {
-			Scanner klawiatura = new Scanner(System.in);
-			// Miesiace 
-			int numer = 1; 
-			do { 
-				
-				
-				
-				System.out.println("Podaj nr miesiaca: ");
-				
-				numer = klawiatura.nextInt(); 
-			 
-				if  ((numer <= 0) || (numer >= 13))
-				{
-					System.out.println("Koniec" );
-					break;
-				}
-				else 
-				{
-				String miesiac = podajNazweMiesiaca(numer); 
-
-				System.out.println("Miesiąc " + numer + " to " + miesiac);
-				}
-				
-				 
-			} while ((numer > 0) || (numer < 13));
-			klawiatura.close();
+			
+		int numer = wczytajNumerMiesiaca();
 		
+		String miesiac = podajNazweMiesiaca(numer);
+		
+		System.out.print("Miesiąc " + numer + " to " + miesiac);
+		
+			
 
 		}
 
-	 
+ 	 
 	}
+
 
  

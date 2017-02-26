@@ -30,8 +30,10 @@ public class Cwiczenie35 {
 
 				System.out.println("Podales " + liczba);
 				System.out.println("Potega " + wynik);
+				
+				
 			}
-		}
+		} klawiatura.close();
 	}
 
 }

@@ -15,7 +15,8 @@ public class Cwiczenie34 {
 		Scanner klawiatura = new Scanner(System.in);
 
 		int liczba = 1;
-		while (true) {
+		
+		while (liczba != 0) {
 			System.out.println("Podaj liczbe: ");
 
 			liczba = klawiatura.nextInt();
@@ -24,8 +25,8 @@ public class Cwiczenie34 {
 
 			System.out.println("Podales " + liczba);
 			System.out.println("Potega " + wynik);
-			 
-		}  
-	}
-
+			
+		}
+		klawiatura.close();  
+	} 
 }
